@@ -1,0 +1,97 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-color:hsla(251,18%,94%,1);
+    background-image:
+    radial-gradient(at 75% 32%, hsla(211,100%,93%,1) 0px, transparent 50%),
+    radial-gradient(at 32% 59%, hsla(0,88%,94%,1) 0px, transparent 50%);
+    overflow-x: hidden;
+}
+
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.input-form form{
+    display: grid;
+}
+
+
+form {
+    align-items: center;
+    padding: 40px 80px 80px 80px;
+}
+
+.form-header{
+    color: rgb(14, 14, 14);
+}
+
+.input-group{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #ff51009d;
+    transform: translateY(-50%);
+}
+
+.input-group input{
+    font-size: 20px;
+    padding-left: 50px;
+    height: 3rem;
+    width: 18rem;
+    border-radius: 10px;
+    border: none
+}
+
+.input-group-checkbox input[type=checkbox]{
+    border: #ffa95d;
+}
+
+.input-group input[type='password'] {
+    font-family: Verdana;
+    letter-spacing: 0.1em;
+}
+
+.input-group input:focus{
+    outline: solid 2px #ff51009d;
+}
+
+
+
+.btn {
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff5100c0;
+    /* box-shadow: 1px 1px 85px 10px rgb(255, 204, 167); */
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #8b4100;
+    transition: ease 0.8s;
+    background-color: #ffa95d;
+    box-shadow: -1px 1px 35px 12px rgba(255, 102, 0, 0.52);
+}
