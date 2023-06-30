@@ -249,3 +249,12 @@ form {
     background-color: white;
     /* Additional card styling */
 }
+
+
+
+@media screen and (max-width: 720px) {
+
+    .input-group input {
+        width: 15rem;
+    }
+}
