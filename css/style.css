@@ -349,6 +349,15 @@ body {
 
 @media screen and (max-width: 720px) {
 
+    html {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
      .input-group input {
         width: 14rem;
     }
