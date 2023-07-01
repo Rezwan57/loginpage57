@@ -25,10 +25,6 @@
                 <input type="password" class="form-control" id="user-pass" placeholder="Password">
             </div>
 
-            <!-- <div class="input-checkbox">
-                <input type="checkbox" onclick="passShow()"><label for="checkbox">Show Password</label>
-            </div> -->
-
 
             <div class="checkbox-wrapper-4">
                 <input class="inp-cbx" id="morning" type="checkbox" onclick="passShow()"/>
@@ -46,20 +42,61 @@
 
             <button type="button" class="btn" onclick="depPage()">Log in</button>
 
-            <p>Haven't any account yet? <button class="signup-btn" id="signup-btn">Sign up</button></p>
+            <p>Haven't any account yet? <button class="signup-btn" id="signup-btn" onclick="appearSignup()">Sign up</button></p>
 
         </form>
-    
-        <div id="popup-card">
-            <div class="card-content">
-                <!-- Your card content goes here -->
-            </div>
+
+    </div>
+
+
+
+
+    <div class="signup-form" id="signup-form">
+
+        <h1>Create an account</h1>
+        
+        <div class="signup-form-container">
+
+            <form>
+            
+                <div class="input-group signup-firstname">
+                    <label for="First Name">Full Name</label>
+                    <input type="text" class="form-control" id="user-id" placeholder="Full Name" required>
+                </div>
+                <div class="input-group signup-email">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" id="user-id" placeholder="Email" required>
+                </div>
+            
+                <div class="input-group signup-password">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="user-pass" placeholder="Password" required>
+                </div>
+                <div class="input-group signup-repassword">
+                    <label for="Retype Password">Retype Password</label>
+                    <input type="password" class="form-control" id="user-pass" placeholder="Retype Password" required>
+                </div>
+
+
+                <button type="button" class="btn create-acc-btn" id="signup-btn">Create Account</button>
+
+                <button class="back-to-login" id="back-to-login" onclick="backToLogin()">Back to login page</button>
+
+            </form>
+
         </div>
 
     </div>
 
 
-    
+    <!-- loading Page -->
+
+    <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
 
 

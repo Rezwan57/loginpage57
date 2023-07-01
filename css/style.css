@@ -9,6 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    position: relative;
     max-width: 100%;
     height: 100%;
     font-family: sans-serif;
@@ -33,10 +34,6 @@ body {
 
 .input-form form{
     display: grid;
-}
-
-
-form {
     align-items: center;
     padding: 40px 80px 80px 80px;
 }
@@ -49,6 +46,7 @@ form {
 .input-group{
     position: relative;
     margin-bottom: 15px;
+    color: white;
 }
 
 .input-group i{
@@ -60,7 +58,7 @@ form {
     transform: translateY(-50%);
 }
 
-.input-group input{
+.input-form form .input-group input{
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 0.4em;
     font-weight: 900;
@@ -235,29 +233,125 @@ form {
 
 
 
-#popup-card {
+/* Signup Form */
+
+.signup-form{
+    position: absolute;
     display: none;
-    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    background-color: rgba(255, 159, 115, 0.5);
+    backdrop-filter: blur(30px);
 }
 
-.card-content {
-    width: 80%;
-    height: 80%;
-    margin: 10% auto;
-    background-color: white;
-    /* Additional card styling */
+
+.signup-form-container{
+    box-sizing: border-box;
 }
 
+.signup-form-container form .input-group{
+    display: grid;
+    color: black;
+}
+
+.signup-form-container form .input-group input{
+    font-family: 'quicksand';
+    height: 3rem;
+    width: 18rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0px 15px 0px 15px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 8px;
+}
+
+.create-acc-btn{
+    width: 100%;
+}
+
+
+.back-to-login {
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: rgb(255, 94, 0);
+    border: none;
+    font-size: 16px;
+    text-decoration: underline;
+
+    &:hover{
+        color: #8b4100;
+        transition: ease 0.5s;
+    }
+}
+
+
+/* loading animation */
+
+.spinner {
+    width: 11.2px;
+    height: 11.2px;
+    animation: spinner-o824ag 1s infinite linear;
+}
+
+.spinner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff4300;
+    border-radius: 50%;
+    animation: spinner-vse6n7 1.25s infinite ease;
+}
+
+.spinner div:nth-child(1) {
+    --rotation: 90;
+}
+
+.spinner div:nth-child(2) {
+    --rotation: 180;
+}
+
+.spinner div:nth-child(3) {
+    --rotation: 270;
+}
+
+.spinner div:nth-child(4) {
+    --rotation: 360;
+}
+
+@keyframes spinner-vse6n7 {
+
+    0%,
+    100% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
+    }
+
+    50% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%);
+    }
+}
+
+@keyframes spinner-o824ag {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 @media screen and (max-width: 720px) {
 
-    .input-group input {
+     .input-group input {
         width: 15rem;
     }
+
+
 }

@@ -1,4 +1,5 @@
-function passShow() {
+const passShow = () => {
+
     var userPass = document.getElementById("user-pass");
     if (userPass.type === "password") {
         userPass.type = "text";
@@ -7,11 +8,12 @@ function passShow() {
     }
 }
 
-function depPage() {
+const depPage = () => {
 
     var userId = document.getElementById("user-id").value;
     var userPass = document.getElementById("user-pass").value;
 
+    document.getElementById("user-id").value = ""
 
     if (userId === "123123" && userPass === "123123") {
         window.location.href = "department.html";
@@ -22,19 +24,32 @@ function depPage() {
 }
 
 
-function popSignup( nhb ) {
+const appearSignup = () => {
 
-    const popupButton = document.getElementById('signup-btn');
-    const popupCard = document.getElementById('popup-card');
+    event.preventDefault();
 
-    popupButton.addEventListener('click', () => {
-        popupCard.style.display = 'block';
-    });
-
-    popupCard.addEventListener('click', (event) => {
-        if (event.target === popupCard) {
-            popupCard.style.display = 'none';
-        }
-    });
+    const signupForm = document.getElementById('signup-form');
+    signupForm.style.display = 'flex';
 
 }
+
+
+const backToLogin = () => {
+
+    event.preventDefault();
+
+    const signupForm = document.getElementById('signup-form');
+    signupForm.style.display = 'none';
+
+}
+
+
+document.onreadystatechange =  () => {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector(".spinner").style.display = "block";
+    } else {
+        document.querySelector(".spinner").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
