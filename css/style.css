@@ -247,14 +247,14 @@ body {
     height: 100%;
     z-index: 10;
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(10%);
     animation: top-to-bottom 1s forwards;
 }
 
 @keyframes top-to-bottom {
     from {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(10%);
     }
 
     to {
