@@ -24,12 +24,30 @@ const depPage = () => {
 }
 
 
+
+
 const appearSignup = () => {
 
     event.preventDefault();
 
     const signupForm = document.getElementById('signup-form');
+
     signupForm.style.display = 'flex';
+
+    var body = document.querySelector("body");
+    var width = window.innerWidth;
+    var inputForm = document.querySelector(".input-form");
+
+    if (width <= 720) {
+        body.style.padding = "15px";
+        inputForm.style.borderRadius = "15px 15px 0px 0px";
+    } else {
+        body.style.padding = "0px";
+        inputForm.style.borderRadius = "0px";
+    }
+
+    var button = document.getElementById("signup-btn");
+    button.addEventListener("click", appearSignup);
 
 }
 
@@ -40,6 +58,18 @@ const backToLogin = () => {
 
     const signupForm = document.getElementById('signup-form');
     signupForm.style.display = 'none';
+
+    var body = document.querySelector("body");
+    var width = window.innerWidth;
+    var inputForm = document.querySelector(".input-form");
+
+    if (width <= 720) {
+        body.style.padding = "0px";
+        inputForm.style.borderRadius = "0px";
+    }
+
+    var button = document.getElementById("signup-btn");
+    button.addEventListener("click", appearSignup);
 
 }
 
@@ -80,4 +110,6 @@ const formAnimation = () => {
     }
 };
 
+
+// Media Query
 
