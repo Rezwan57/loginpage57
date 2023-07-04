@@ -254,14 +254,15 @@ body {
 @keyframes pop-up {
 
     from {
+        translateY: -100% ;
         opacity: 0;
         transform: scale(0.7);
     }
 
     to {
+        translateY: 100%;
         opacity: 1;
         transform: scale(1);
-        backdrop-filter: blur(25px);
     }
 }
 
@@ -270,8 +271,8 @@ body {
 
 
 .signup-form-container{
-    background-color: rgba(216, 214, 224, 0.308);
-        background-image:
+    background-color: rgba(216, 214, 224);
+    background-image:
             radial-gradient(at 41% 41%, rgba(255, 223, 219, 0.212) 0px, transparent 50%),
             radial-gradient(at 59% 50%, rgba(179, 225, 255, 0.288) 0px, transparent 50%);
     padding: 50px;
@@ -384,8 +385,20 @@ body {
     }
 
     body {
+        background-image: none;
+        background-color: black;
+        padding: 15px;
         overflow: hidden;
     }
+
+    .input-form{
+        border-radius: 15px 15px 0px 0px;
+        background-color: rgba(216, 214, 224);
+            background-image:
+                radial-gradient(at 41% 41%, rgba(255, 223, 219, 0.212) 0px, transparent 50%),
+                radial-gradient(at 59% 50%, rgba(179, 225, 255, 0.288) 0px, transparent 50%);
+    }
+
 
      .input-group input {
         width: fit-content;
@@ -395,8 +408,8 @@ body {
     .signup-form-container{
         height: 100%;
         width: 100%;
-        border-radius: 20px 20px 0px 0px;
-        margin-top: 25px;
+        border-radius: 15px 15px 0px 0px;
+        margin-top: 30px;
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
 

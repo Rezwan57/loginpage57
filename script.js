@@ -59,7 +59,6 @@ const formAnimation = () => {
 
     const signupForm = document.getElementById('signup-form');
 
-
     const showSignupAnimation = () => {
         
         signupForm.style.display = 'block';
@@ -71,8 +70,9 @@ const formAnimation = () => {
     }
 
     closeSignupAnimation: () => {
-        const signupForm = document.getElementById('signup-form');
+
         signupForm.classList.add('hide');
+
         setTimeout(() => {
             signupForm.style.display = 'none';
             signupForm.classList.remove('hide');
