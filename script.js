@@ -39,6 +39,7 @@ const appearSignup = () => {
     var inputForm = document.querySelector(".input-form");
 
     if (width <= 720) {
+        body.style.transition = "padding 0.8s";
         body.style.padding = "15px";
         inputForm.style.borderRadius = "15px 15px 0px 0px";
     } else {
@@ -64,6 +65,7 @@ const backToLogin = () => {
     var inputForm = document.querySelector(".input-form");
 
     if (width <= 720) {
+        body.style.transition = "padding 0.8s";
         body.style.padding = "0px";
         inputForm.style.borderRadius = "0px";
     }
