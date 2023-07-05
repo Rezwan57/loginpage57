@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 html {
     height: 100%;
@@ -270,10 +270,10 @@ body {
 
 
 .signup-form-container{
-    background-color: rgba(216, 214, 224);
-    background-image:
-            radial-gradient(at 41% 41%, rgba(255, 223, 219, 0.212) 0px, transparent 50%),
-            radial-gradient(at 59% 50%, rgba(179, 225, 255, 0.288) 0px, transparent 50%);
+    background-color: rgb(255, 255, 255);
+    /* background-image:
+            radial-gradient(at 41% 41%, rgba(255, 223, 219, 0.651) 0px, transparent 50%),
+            radial-gradient(at 59% 50%, rgba(179, 225, 255, 0.575) 0px, transparent 50%); */
     padding: 50px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -285,18 +285,24 @@ body {
     color: black;
 }
 
+
+
 .signup-form-container form .input-group input{
-    font-family: 'quicksand';
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     height: 2rem;
     width: auto;
     margin-top: 5px;
     padding: 5px 15px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #ffffff;
+    background-color: #ececec;
     border-radius: 10px;
     border: none;
     border-radius: 8px;
+}
+
+.signup-form-container form .input-group label{
+    font-family: 'Poppins', sans-serif;
+    opacity: 70%;
 }
 
 .create-acc-btn{
