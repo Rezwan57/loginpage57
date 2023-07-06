@@ -218,7 +218,7 @@ body {
     border: none;
 
     @media screen and (max-width: 640px) {
-            width: 100%;
+        width: 100%;
     }
 
 }
@@ -277,33 +277,83 @@ body {
 
 
 
+/* .signup-form-header h4{
 
-.signup-form-container{
+    
+    @media screen and (max-width: 640px) {
+        position: absolute;
+        margin-top: -5%;
+        left: 20%;
+    }
+} */
+
+
+
+.signup-form-container {
     background-color: rgb(219, 213, 224);
-    background-image:
-            radial-gradient(at 41% 41%, hsla(6, 100%, 93%, 1) 0px, transparent 50%),
-            radial-gradient(at 59% 50%, hsla(204, 100%, 85%, 1) 0px, transparent 50%);
-    box-shadow: 0px 0px 50px 8px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(at 41% 41%, hsla(6, 100%, 93%, 1) 0px, transparent 50%),
+        radial-gradient(at 59% 50%, hsla(204, 100%, 85%, 1) 0px, transparent 50%);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     box-sizing: border-box;
-    display: grid;
-    padding: 60px 50px;
-    display: grid;
-    align-items: center;
+    padding: 1px 50px 60px 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+}
 
-    @media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
+    .signup-form-container {
         background-color: rgb(219, 213, 224);
-        background-image:
-            radial-gradient(at 41% 41%, hsla(6, 100%, 93%, 1) 0px, transparent 50%),
+        background-image: radial-gradient(at 41% 41%, hsla(6, 100%, 93%, 1) 0px, transparent 50%),
             radial-gradient(at 59% 50%, hsla(204, 100%, 85%, 1) 0px, transparent 50%);
         height: 100%;
         width: 100%;
-        margin-top: 30px;
+        margin-top: 25px;
         border-radius: 15px 15px 0px 0px;
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-        }
+    }
 }
+
+
+.signup-form-header {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.back-to-login {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--primaryColor);
+    border: none;
+    font-size: 16px;
+    opacity: 1;
+    transform: scale(1);
+    animation: pop-back 0.5s forwards;
+}
+
+@media screen and (max-width: 640px) {
+    .back-to-login {
+        display: inline-block;
+        float: none;
+    }
+}
+
+.back-to-login:hover {
+    color: var(--secondaryColor);
+    transition: ease 0.5s;
+}
+
+h4 {
+    margin: 0;
+}
+
+/* last */
 
 .signup-form-container form{
     display: grid;
@@ -346,30 +396,21 @@ body {
     opacity: 70%;
 }
 
+.signup-form-container form .input-group-signup .or-separte{
+    display: flex;
+}
+
+.signup-form-container form .input-group-signup .or-separte hr{
+    border: 1px solid black;
+}
+
 #create-acc-btn{
-    margin-top: 25px;
+    margin-top: 12px;
     width: auto;
 }
 
 
-.back-to-login {
-    width: 100%;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #ffffff00;
-    color: var(--primaryColor);
-    border: none;
-    font-size: 16px;
-    text-decoration: underline;
-    opacity: 1;
-    transform: scale(1);
-    animation: pop-back 0.5s forwards;
 
-    &:hover{
-        color: var(--secondaryColor);
-        transition: ease 0.5s;
-    }
-}
 
 
 /* loading animation */
